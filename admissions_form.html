@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Admission Portal 2025-2026 | Avanthi's St. Theressa Institute of Engineering & Technology</title>
+  <meta name="description" content="Official Online Admission Application for Avanthi's St. Theressa Institute of Engineering & Technology (ASTC). Apply for B.Tech, M.Tech, and Diploma courses.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .admission-page {
+      padding: 3rem 0 5rem 0;
+      background: var(--bg-page);
+    }
+    .admission-hero {
+      background: linear-gradient(135deg, #06182c 0%, #0a2540 100%);
+      color: #ffffff;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .admissions-form-container {
+      max-width: 860px;
+      margin: -2rem auto 0 auto;
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-xl);
+      padding: 3rem;
+      position: relative;
+      z-index: 10;
+    }
+    .form-section-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 2rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-subtle);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .form-section-title:first-of-type {
+      margin-top: 0;
+    }
+    .info-callout {
+      background: var(--primary-subtle);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 2rem;
+      font-size: 0.875rem;
+      color: var(--text-main);
+    }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    .success-confirmation {
+      display: none;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .success-icon {
+      width: 72px;
+      height: 72px;
+      background: var(--success-soft);
+      color: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin: 0 auto 1.5rem auto;
+      border: 2px solid var(--success);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <aside class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-accreditation">
+        <span class="topbar-badge">Approved by AICTE | Affiliated to JNTU-GV</span>
+        <span class="eamcet-tag">EAMCET CODE: ASTC</span>
+      </div>
+      <div class="topbar-links">
+        <a href="index.html" class="topbar-link">&larr; Back to Main Website</a>
+        <a href="tel:+919704755549" class="topbar-link">Helpline: +91-9704755549</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Admissions Hero -->
+  <header class="admission-hero">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div>
+        <span class="section-tag" style="background: rgba(255,255,255,0.1); color: #fed7aa; border-color: rgba(255,255,255,0.2);">
+          Admissions 2025-2026
+        </span>
+        <h1 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin-top: 0.5rem;">
+          Online Admission Application Form
+        </h1>
+        <p style="color: #cbd5e1; font-size: 0.95rem;">
+          Avanthi's St. Theressa Institute of Engineering and Technology (ASTC), Garividi
+        </p>
+      </div>
+      <a href="index.html" class="btn btn-outline-white btn-sm">
+        &larr; Back to College Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Admission Form Section -->
+  <main class="admission-page">
+    <div class="container">
+      <div class="admissions-form-container">
+        <div id="formContentBlock">
+          <div class="info-callout">
+            <strong>Admissions Helpline:</strong> For direct counseling or management quota enquiries, you may also contact us directly at <strong>+91-9704755549</strong>, <strong>7893433345</strong> or email <strong>sttheressa99@gmail.com</strong>.
+          </div>
+
+          <form id="portalAdmissionForm">
+            <!-- Section 1: Candidate Details -->
+            <div class="form-section-title">
+              <span>1.</span> Personal & Contact Information
+            </div>
+            
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="pFullName">Candidate's Full Name (As per SSC Marksheet) *</label>
+                <input type="text" id="pFullName" class="form-control" placeholder="First Name & Surname" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pParentName">Father's / Guardian's Name *</label>
+                <input type="text" id="pParentName" class="form-control" placeholder="Guardian Full Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pMobile">Mobile Number (Active WhatsApp) *</label>
+                <input type="tel" id="pMobile" class="form-control" placeholder="10-digit number" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pEmail">Email ID *</label>
+                <input type="email" id="pEmail" class="form-control" placeholder="candidate@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pDob">Date of Birth *</label>
+                <input type="date" id="pDob" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pGender">Gender *</label>
+                <select id="pGender" class="form-control" required>
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="pAddress">Permanent Residential Address *</label>
+                <input type="text" id="pAddress" class="form-control" placeholder="Door No, Street, Village/Town, District, State, PIN" required>
+              </div>
+            </div>
+
+            <!-- Section 2: Course Selection -->
+            <div class="form-section-title">
+              <span>2.</span> Program & Branch Preference
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="pProgramLevel">Program Level *</label>
+                <select id="pProgramLevel" class="form-control" required>
+                  <option value="">Select Level</option>
+                  <option value="btech">Undergraduate B.Tech (4 Years)</option>
+                  <option value="mtech">Postgraduate M.Tech (2 Years)</option>
+                  <option value="diploma">Diploma / Polytechnic (3 Years)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="pBranch">Branch Desired *</label>
+                <select id="pBranch" class="form-control" required>
+                  <option value="">Select Engineering Branch</option>
+                  <option value="cse">Computer Science & Engineering (CSE)</option>
+                  <option value="aiml">CSE (AI & Machine Learning)</option>
+                  <option value="ece">Electronics & Communication (ECE)</option>
+                  <option value="eee">Electrical & Electronics (EEE)</option>
+                  <option value="mech">Mechanical Engineering</option>
+                  <option value="civil">Civil Engineering</option>
+                  <option value="dcme">Diploma in Computer Engineering</option>
+                  <option value="dece">Diploma in ECE</option>
+                  <option value="dme">Diploma in Mechanical</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="pAdmissionType">Admission Category *</label>
+                <select id="pAdmissionType" class="form-control" required>
+                  <option value="convener">Convener Quota (EAMCET/ECET/POLYCET Counseling)</option>
+                  <option value="management">Management Quota / Direct Admission</option>
+                  <option value="lateral">Lateral Entry (Direct 2nd Year for Diploma holders)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="pEntranceRank">Entrance Exam Rank & Hall Ticket (if appeared)</label>
+                <input type="text" id="pEntranceRank" class="form-control" placeholder="Rank / Hall Ticket No.">
+              </div>
+            </div>
+
+            <!-- Section 3: Educational Background -->
+            <div class="form-section-title">
+              <span>3.</span> Academic Qualifications
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="p10thSchool">SSC / 10th School & Board *</label>
+                <input type="text" id="p10thSchool" class="form-control" placeholder="e.g. AP State Board / CBSE" required>
+              </div>
+
+              <div class="form-group">
+                <label for="p10thGpa">10th Percentage / GPA *</label>
+                <input type="text" id="p10thGpa" class="form-control" placeholder="e.g. 9.8 GPA or 92%" required>
+              </div>
+
+              <div class="form-group">
+                <label for="pInterCollege">Intermediate (10+2) / Diploma College Name</label>
+                <input type="text" id="pInterCollege" class="form-control" placeholder="College & Location">
+              </div>
+
+              <div class="form-group">
+                <label for="pInterPercentage">Intermediate / Diploma Marks %</label>
+                <input type="text" id="pInterPercentage" class="form-control" placeholder="e.g. 88%">
+              </div>
+            </div>
+
+            <!-- Section 4: Facilities Required -->
+            <div class="form-section-title">
+              <span>4.</span> Amenities & Transportation Needed
+            </div>
+
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="needHostel" name="needHostel">
+                <span>I require residential <strong>Hostel Accommodation</strong> (Separate boys & girls hostels with food)</span>
+              </label>
+
+              <label class="checkbox-label">
+                <input type="checkbox" id="needTransport" name="needTransport">
+                <span>I require daily <strong>College Bus Transport</strong> (Connecting Vizianagaram, Srikakulam, and surrounding areas)</span>
+              </label>
+
+              <label class="checkbox-label">
+                <input type="checkbox" id="needScholarship" name="needScholarship">
+                <span>I am eligible for <strong>Government Fee Reimbursement / JVD Scholarship</strong></span>
+              </label>
+            </div>
+
+            <!-- Declaration & Submission -->
+            <div style="margin-top: 2.5rem; border-top: 1px solid var(--border-light); padding-top: 1.5rem;">
+              <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Declaration: I certify that the information provided above is true and complete to the best of my knowledge. I understand that admission is subject to verification of certificates by the institution and university authorities.
+              </p>
+
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2rem;">
+                  Submit Application Form
+                </button>
+                <a href="index.html" class="btn btn-outline">
+                  Cancel
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Submission Success Display -->
+        <div id="confirmationBlock" class="success-confirmation">
+          <div class="success-icon">✓</div>
+          <h2 style="font-family: var(--font-heading); color: var(--text-heading); margin-bottom: 0.75rem;">
+            Application Submitted Successfully!
+          </h2>
+          <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 1.5rem auto;">
+            Thank you for applying to Avanthi's St. Theressa Institute of Engineering and Technology. Your provisional Application Number has been recorded. Our Admissions Counselor will contact you within 24 hours.
+          </p>
+
+          <div style="background: var(--bg-subtle); padding: 1.25rem; border-radius: var(--radius-md); max-width: 420px; margin: 0 auto 2rem auto; text-align: left;">
+            <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>Institution:</strong> Avanthi's St. Theressa (ASTC)</p>
+            <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>Location:</strong> Garividi, Vizianagaram</p>
+            <p style="font-size: 0.85rem; margin-bottom: 0.4rem;"><strong>Contact:</strong> +91-9704755549 | sttheressa99@gmail.com</p>
+            <p style="font-size: 0.85rem; margin-bottom: 0;"><strong>EAMCET Code:</strong> ASTC</p>
+          </div>
+
+          <a href="index.html" class="btn btn-primary">
+            Return to College Homepage
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="padding-top: 2rem;">
+    <div class="container footer-bottom" style="border-top: none; padding-top: 0;">
+      <div>
+        &copy; 2025 Avanthi's St. Theressa Institute of Engineering and Technology | Garividi, Vizianagaram
+      </div>
+      <div class="footer-sublinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#departments">Departments</a>
+        <a href="index.html#placements">Placements</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Prefill branch or category from URL query parameters if present
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const course = urlParams.get('course');
+      const branchSelect = document.getElementById('pBranch');
+      const programSelect = document.getElementById('pProgramLevel');
+
+      if (course && branchSelect) {
+        if (course.includes('btech')) {
+          if (programSelect) programSelect.value = 'btech';
+          if (course === 'btech_cse') branchSelect.value = 'cse';
+          if (course === 'btech_aiml') branchSelect.value = 'aiml';
+          if (course === 'btech_ece') branchSelect.value = 'ece';
+          if (course === 'btech_eee') branchSelect.value = 'eee';
+          if (course === 'btech_mech') branchSelect.value = 'mech';
+          if (course === 'btech_civil') branchSelect.value = 'civil';
+        } else if (course.includes('mtech')) {
+          if (programSelect) programSelect.value = 'mtech';
+          if (course === 'mtech_cse') branchSelect.value = 'cse';
+        } else if (course.includes('diploma')) {
+          if (programSelect) programSelect.value = 'diploma';
+          if (course === 'diploma_cse') branchSelect.value = 'dcme';
+          if (course === 'diploma_ece') branchSelect.value = 'dece';
+          if (course === 'diploma_mech') branchSelect.value = 'dme';
+        }
+      }
+
+      // Handle submission
+      const form = document.getElementById('portalAdmissionForm');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          document.getElementById('formContentBlock').style.display = 'none';
+          document.getElementById('confirmationBlock').style.display = 'block';
+          window.scrollTo({ top: 150, behavior: 'smooth' });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
